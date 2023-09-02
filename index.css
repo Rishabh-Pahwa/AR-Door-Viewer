@@ -1,0 +1,394 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
+
+/* DESKTOP POP-UP */
+
+  /* Styles for the overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+        /* Styles for the popup content */
+        .popup-content {
+          font-family: "Helvetica";
+          font-size: 20px;
+          background-color: white;
+          padding: 40px; 
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          text-align: center;
+          color: rgb(4, 13, 59);
+          display: flex;
+          flex-direction: column;
+          justify-content: center; /* Center content vertically */
+          align-items: center; /* Center content horizontally */
+      }
+
+      .popup-image {
+        margin-top: 100px;
+        padding-top: 50px;
+    }
+
+/* NAVBAR */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Work Sans', sans-serif; */
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  font-family: "Antic Didone", serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15%;
+  background: rgba(31, 32, 41, 0.72);
+  transition: all 0.5s ease;
+}
+
+.logo {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list a {
+  margin: 0 5px;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.nav-list a:hover {
+  color: #00c9e0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  color: #fff;
+  background: #2f3749;
+  border-radius: 30px;
+  font-size: 15px;
+  border: 2px solid transparent;
+  /* transition: all 0.40s ease; */
+}
+
+.btn:hover {
+  border: 2px solid #00c9e0;
+  background: transparent;
+  color: #00c9e0;
+}
+
+#menu-icon {
+  color: #fff;
+  font-size: 38px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.hero {
+  font-family: "Antic Didone", bold;
+  /* height: 100vh;
+  width: 100%; */
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.m-text h1 {
+  font-size: 90px;
+  font-weight: 800;
+  mask-border: 5px;
+}
+
+.m-text p {
+  font-size: 65px;
+  font-weight: 600;
+}
+
+@media (max-width: 1350px) {
+  nav {
+    padding: 20px 5%;
+  }
+
+  section {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  .m-text h1 {
+    font-size: 70px;
+  }
+
+  .m-text p {
+    font-size: 22px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 9px 27px;
+  }
+}
+
+@media (max-width: 860px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: -800px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #00c9e0;
+    text-align: left;
+    transition: all 0.5s ease;
+  }
+
+  .nav-list a {
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 2px solid #fff;
+    display: block;
+  }
+
+  .nav-list a:hover {
+    background: #fff;
+    color: #00c9e0;
+  }
+
+  .nav-list.open {
+    top: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .m-text h1 {
+    font-size: 70px;
+  }
+}
+
+/* IMAGES */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+a:hover {
+  color: rgb(15, 82, 186);
+  padding-left: 5px;
+}
+
+/* body {
+  background-color: rgb(255, 217, 0);
+} */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #1f2029;
+  overflow-x: hidden;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+  width: 100%;
+  /* display: -ms-flexbox; */
+  /* display: flex; */
+  /* -ms-flex-wrap: wrap; */
+  /* flex-wrap: wrap; */
+  /* -ms-flex-pack: center; */
+  /* justify-content: center; */
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+
+.container {
+  display: table;
+  margin: 50px auto auto auto;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+
+.container:hover .image-caption {
+  bottom: -8px;
+  opacity: 0;
+}
+
+.container:hover .image-menu {
+  /*transform: translate(0px, 432px);
+  /*-webkit-transform: translate(0px, 432px);
+  -moz-transform: translate(0px, 432px);
+  -o-transform: translate(0px, 432px);
+  -ms-transform: translate(0px, 432px);*/
+  top: 0;
+}
+
+.image {
+  position: relative;
+  height: 900px;
+  width: 600px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image fills the container without distortion */
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  color: rgb(255, 255, 255);
+  font-family: "Fredoka One", cursive;
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.image-menu {
+  position: absolute;
+  top: -1432px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(123, 122, 122, 0.85);
+  font-family: "Fredoka One", cursive;
+  padding: 20px;
+}
+
+.image-menu h2 {
+  margin: 0;
+  color: rgb(11, 11, 10);
+  font-size: 50px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.image-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.image-menu li {
+  margin-top: 18px;
+  padding: 5px;
+  font-size: 40px;
+}
+
+.transition {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  /* -webkit-backface-visibility: hidden; */
+}
+
+@media (min-width: 1000px) {
+  .image {
+    height: 500px;
+    width: 300px;
+  }
+}
+
+/* Increase the size of the input boxes */
+.custom-size-inputs input {
+  width: 100%; /* Make the input boxes expand to the full width of their container */
+  padding: 10px; /* Add padding to the input boxes */
+  margin-bottom: 10px; /* Add some spacing between the input boxes */
+  font-size: 16px; /* Adjust font size as needed */
+  border-radius: 4px;
+}
+
+/* Increase the size of the "GO" button */
+.custom-size-inputs button {
+  padding: 20px 30px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.custom-size-inputs2 input {
+  width: 100%; /* Make the input boxes expand to the full width of their container */
+  padding: 10px; /* Add padding to the input boxes */
+  margin-bottom: 10px; /* Add some spacing between the input boxes */
+  font-size: 16px; /* Adjust font size as needed */
+  border-radius: 4px;
+}
+
+/* Increase the size of the "GO" button */
+.custom-size-inputs2 button {
+  padding: 20px 30px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 5px;
+}

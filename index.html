@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+    <title>View in my space</title>
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="index.css" />
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="./assets/ar_logo.png" /> 
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  </head>
+
+  <body>
+	<!-- DESKTOP POP-UP  -->
+	  <div class="overlay" id="qr-popup">
+        <div class="popup-content">
+            <p>This device isn't supported.<br>
+				Please scan the QR code with your smartphone or tablet.</p>
+            <img src="./assets/custom-steeldoors_qr.jpeg" alt="QR Code" width="200">
+        </div>
+    </div>
+
+	<!-- NAVBAR  -->
+	<nav>
+        <a href="#" class="logo">CUSTOM STEEL DOORS</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <!-- <ul class="nav-list">
+            <li><a href="https://www.prairiemodernco.com/">Home</a></li>
+            <li><a href="https://www.prairiemodernco.com/about-2">About Us</a></li>
+            <li><a href="https://www.prairiemodernco.com/s-projects-side-by-side">Doors</a></li>
+        </ul> -->
+
+        <!-- <a  href="https://www.prairiemodernco.com/about-2#:~:text=E%2DMail-,%3A,-info%40prairiemodernco.com" class="btn">Get in Touch</a> -->
+    </nav>
+
+	<!-- HERO TEXT  -->
+    <section class="hero">
+        <div class="m-text">
+            <!-- <h1>Responsive Navbar</h1> -->
+            <p>Choose Door Style</p>
+        </div>
+    </section>
+
+<!-- DOOR-1  -->
+	<div class="container">
+		<div class="image">
+		  <span class="image-caption transition">Double Door</span>
+		  <span class="image-menu transition">
+			<h2>Select size</h2>
+			<ul>
+			  <li><a  id="d1_opt1" href="#">8 x 3 feet</a></li>
+			  <li><a id ="d1_opt2"  href="#">7 x 3 feet</a></li>
+			   <li id="d1_custom">
+          		<a>Custom size</a>	
+          <div class="custom-size-inputs" style="display: none;">
+            <input id="widthInput" type="text" placeholder="Width (in feet)" />
+            <input id="heightInput" type="text" placeholder="Height (in feet)" />
+            <button id="goButton">GO</button>
+          </div>
+        </li>
+			</ul>
+		  </span>
+		  <img src="./assets/Double door.png"  alt="Double Door"/>
+		</div>
+	  </div>
+
+	  <!-- DOOR-2  -->
+
+	  <div class="container">
+		<div class="image">
+		  <span class="image-caption transition">Single Door</span>
+		  <span class="image-menu transition">
+			<h2>Select size</h2>
+			<ul>
+			  <li><a  id="d2_opt1" href="#">8 x 3 feet</a></li>
+			  <li><a id ="d2_opt2"  href="#">7 x 3 feet</a></li>
+			  <li id="d2_custom">
+				<a>Custom size</a>	
+		<div class="custom-size-inputs2" style="display: none;">
+		  <input id="widthInput2" type="text" placeholder="Width (in feet)" />
+		  <input id="heightInput2" type="text" placeholder="Height (in feet)" />
+		  <button id="goButton2">GO</button>
+		</div>
+	  </li>
+			</ul>
+		  </span>
+		  <img src="./assets/single_door.png" alt="Single Door"/>
+		</div>
+	  </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+/* LOADER  */
+
+
+
+body, html {
+    height: 100%;
+    text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+.loader-wrapper{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.loader {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  border: 10px solid #Fff;
+  /* top: 50%; */
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+
+/* MAIN CSS */
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+}
+.popup-overlay {
+  background-color: rgba(27, 26, 26, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 998;
+  backdrop-filter: blur(8px); 
+}
+
+.popup{
+    background-color: #ffffff;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: block;
+    text-align: center;
+    z-index: 999; 
+}
+.popup button{
+  display: block;
+  width: 120px;
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #0f72e5;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+.popup p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+.large-button {
+    font-size: 18px; 
+    padding: 40px 60px; 
+}
+.canvas-container {
+    position: relative;
+  }
+  
+
+  #fixButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 50px; 
+    background-color: #484d51;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 45px;
+    opacity: 0.9;
+  }
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-79%);
+  width: 50px;
+  height: 50px;
+  font-size: 250px;
+  background-color: transparent;
+  color: rgb(4, 240, 232);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.arrow-button:hover {
+  opacity: 0.8;
+}
+
+#leftArrow {
+  left: 20px;
+}
+
+#rightArrow {
+  right: 20px;
+}
+
+.swapper-overlay {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px); 
+  justify-content: center;
+  align-items: center;
+  z-index: 990;
+}
+.swapper {
+  display: none;
+  border: 18px solid #f3f3f3;
+  border-top: 18px solid #0591ef;
+  border-radius: 50%;
+  width: 150px; 
+  height: 150px;
+  animation: spin 1s linear infinite;
+  /* position: fixed;  */
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  margin-top: -75px; 
+  margin-left: -75px; 
+  z-index: 999; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
